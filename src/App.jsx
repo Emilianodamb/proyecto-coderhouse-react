@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import NavBar from './components/NavBar.jsx'
+import ItemListContainer from './components/ItemListContainer.jsx'
 import './App.css'
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <h1>Primer commit - inicializando el proyecto</h1>
-      <h2>Levantando servidor y eliminando el código predefinido</h2>
+      <NavBar />
+      <ItemListContainer greeting="PROductManagement" message="El salto de calidad que necesita tu empresa"/>
     </>
   )
 }

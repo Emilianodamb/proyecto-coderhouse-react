@@ -1,0 +1,32 @@
+.cart-container {
+    position: relative; /* Necesario para que los elementos hijos se posicionen correctamente */
+    display: flex; /* Para que el contenedor del carrito se ajuste al tamaño de la imagen */
+  }
+.cart-button{
+    width: 50px; /* Ajusta el tamaño del carrito según necesites */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.241);
+    border: 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart{
+    height: 30px;
+    width: 30px;
+}
+.cart-count{
+    position: absolute;
+    top: -10px; /* Ajusta la posición vertical */
+    right: -10px; /* Ajusta la posición horizontal */
+    background-color: red; /* Color de la burbuja */
+    color: white; /* Color del número en la burbuja */
+    border-radius: 50%; /* Hace la burbuja circular */
+    padding: 5px 10px; /* Espaciado dentro de la burbuja */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Hace el texto más legible */
+    min-width: 25px; /* Ancho mínimo de la burbuja */
+    text-align: center; /* Centrar el número */
+    line-height: 1; /* Para que el texto quede bien centrado */
+}
