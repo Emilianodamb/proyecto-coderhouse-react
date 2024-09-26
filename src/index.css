@@ -8,3 +8,8 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
 }
+h2{
+  color: rgb(1, 181, 1);
+  font-size: large;
+  text-shadow: .25px .25px 1px black;
+}

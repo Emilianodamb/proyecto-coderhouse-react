@@ -2,7 +2,6 @@ import "./CartWidget.css";
 import cart from '../assets/cartwdgt.svg'
 
 function CartWidget() {
-  //const [count, setCount] = useState(0);
 
   return (
     <div className="cart-container">

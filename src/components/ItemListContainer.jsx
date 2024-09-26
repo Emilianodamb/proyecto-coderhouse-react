@@ -1,15 +1,33 @@
-import { useState } from "react";
-import CartWidget from "./CartWidget.jsx";
+import React, { useState, useEffect } from "react";
+import products from "../assets/mockData.json";
+import ItemList from "./ItemList.jsx";
 import "./ItemListContainer.css";
 
-function ItemListContainer({greeting, message}) {
-  const [count, setCount] = useState(0);
+function ItemListContainer() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    
+    const fetchProducts = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(products);
+        }, 2000);
+      });
+    };
+
+
+    fetchProducts()
+      .then((resolvedProducts) => {
+        setItems(resolvedProducts);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
-    <li className="item-list-container">
-        <h1>{greeting}</h1>
-        <h2>{message}</h2>
-    </li>
+    <div>{items.length === 0 ? (<p>Cargando productos...</p>) : (<ItemList products={items} />)}</div>
   );
 }
 
