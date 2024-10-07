@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item.jsx";
-import "./ItemList.css";
+import "../styles/ItemList.css";
 
 function ItemList({products}) {
 

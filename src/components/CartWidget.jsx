@@ -1,4 +1,4 @@
-import "./CartWidget.css";
+import "../styles/CartWidget.css";
 import cart from '../assets/cartwdgt.svg'
 
 function CartWidget() {

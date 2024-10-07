@@ -1,5 +1,5 @@
 import React from "react";
-import "./Item.css";
+import "../styles/Item.css";
 import ItemCount from "./ItemCount.jsx";
 
 const capitalizeFirstLetter = (text) => {
@@ -30,6 +30,7 @@ const Item = ({item}) => {
                 <span className="item-stock">Stock: {item.stock}</span>
                 <div className="item-info-footer">
                     <span className="item-price">{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
+                    <button><a href=""></a></button>
                     <ItemCount stock={item.stock}/>
                 </div>
             </div>

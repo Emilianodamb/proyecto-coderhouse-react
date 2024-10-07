@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import products from "../assets/mockData.json";
 import ItemList from "./ItemList.jsx";
-import "./ItemListContainer.css";
+import "../styles/ItemListContainer.css";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);

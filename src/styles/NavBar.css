@@ -1,0 +1,29 @@
+nav{
+    background-color: rgba(7, 6, 6, 0.553); /* Color blanco semitransparente */
+    backdrop-filter: blur(10px);
+    display: flex;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.navbar-sections{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+.navbar-sections li:hover{
+    background-color: rgba(58, 47, 0, 0.76);
+    border-radius: 5px;
+}
+.navbar-sections li a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+.navbar-sections li a:visited{
+    color: white;
+    text-decoration: none;
+}
