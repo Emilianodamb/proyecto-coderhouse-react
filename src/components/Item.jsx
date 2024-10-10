@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Item.css";
+import styles from "../styles/Item.module.css";
 import ItemCount from "./ItemCount.jsx";
 
 const capitalizeFirstLetter = (text) => {
@@ -21,16 +21,15 @@ const addFinalDot = (description) => {
 
 const Item = ({item}) => {
     return (
-        <div className="item-container">
+        <div className={styles.itemContainer}>
             <img src={item.imageUrl} alt={item.title}/>
-            <div className="item-info">
+            <div className={styles.itemInfo}>
                 <b>{item.brand}</b>
                 <h2>{removeFirstWord(item.title)}</h2>
-                <span className="item-description">{addFinalDot(capitalizeFirstLetter(item.description))}</span>
-                <span className="item-stock">Stock: {item.stock}</span>
-                <div className="item-info-footer">
-                    <span className="item-price">{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
-                    <button><a href=""></a></button>
+                <span className={styles.itemDescription}>{addFinalDot(capitalizeFirstLetter(item.description))}</span>
+                <span className={styles.itemStock}>Stock: {item.stock}</span>
+                <div className={styles.itemInfoFooter}>
+                    <span className={styles.itemPrice}>{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
                     <ItemCount stock={item.stock}/>
                 </div>
             </div>

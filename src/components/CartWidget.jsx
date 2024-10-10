@@ -1,14 +1,14 @@
-import "../styles/CartWidget.css";
+import styles from "../styles/CartWidget.module.css";
 import cart from '../assets/cartwdgt.svg'
 
-function CartWidget() {
+const CartWidget = () => {
 
   return (
-    <div className="cart-container">
-        <button className="cart-button">
-            <img src={cart} alt="boton carrito" className="cart" />
+    <div className={styles.cartContainer}>
+        <button className={styles.cartButton}>
+            <img src={cart} alt="boton carrito" className={styles.cart} />
         </button>
-        <span className="cart-count">3</span>
+        <span className={styles.cartCount}>3</span>
     </div>
   );
 }

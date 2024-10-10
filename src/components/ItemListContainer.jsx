@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import products from "../assets/mockData.json";
 import ItemList from "./ItemList.jsx";
-import "../styles/ItemListContainer.css";
+import styles from "../styles/ItemListContainer.module.css";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer() {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {

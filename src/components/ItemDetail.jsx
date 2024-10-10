@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCount from "./ItemCount.jsx";
-import "../styles/ItemDetail.css";
+import styles from "../styles/ItemDetail.module.css";
 
 const ItemDetail = ({ product }) => {
     if (!product) {
@@ -27,26 +27,28 @@ const ItemDetail = ({ product }) => {
     };
 
     return (
-        <div className="item-detail-container">
-            <div className="gallery-container">
-                <div className="gallery-image-options">
+        <div className={styles.itemDetailContainer}>
+            <div className={styles.galleryContainer}>
+                <div className={styles.galleryImageOptions}>
                     <img src={imageUrl} alt={title} />
                     <img src={imageUrl} alt={title} />
                     <img src={imageUrl} alt={title} />
                     <img src={imageUrl} alt={title} />
                     <img src={imageUrl} alt={title} />
                 </div>
-                <div className="gallery-main-image">
+                <div className={styles.galleryMainImage}>
                     <img src={imageUrl} alt={title} />
                 </div>
 
             </div>
-            <div>
-                <p>{brand}</p>
-                <h2 className="item-detail-title">{removeFirstWord(title)}</h2>
-                <p className="item-detail-price">{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
-                <p className="item-detail-description">{capitalizeFirstLetter(addFinalDot(description))}</p>
-                <p>Stock: {stock}</p>
+            <div className={styles.infoContainer}>
+                <div>
+                    <p>{brand}</p>
+                    <h2 className={styles.itemDetailTitle}>{removeFirstWord(title)}</h2>
+                    <p className={styles.itemDetailPrice}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
+                    <p className={styles.itemDetailDescription}>{capitalizeFirstLetter(addFinalDot(description))}</p>
+                    <p>Stock: {stock}</p>
+                </div>
                 <ItemCount stock={stock}/>
             </div>
         </div>

@@ -1,0 +1,37 @@
+nav{
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.navbarBrand p{
+    font-size: x-large;
+}
+.navbarSections{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+.navbarSections li:hover{
+    background-color: rgba(58, 47, 0, 0.76);
+    border-radius: 5px;
+}
+.navbarSections li a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+.navbarSections li a:visited{
+    color: white;
+    text-decoration: none;
+}
+.categories{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
