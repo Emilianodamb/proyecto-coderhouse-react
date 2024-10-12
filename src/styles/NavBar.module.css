@@ -2,36 +2,50 @@ nav{
     background-color: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
     color: white;
     text-shadow: 1px 1px black;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
 }
-.navbarBrand p{
+.navbarBrand{
     font-size: x-large;
-}
-.navbarSections{
     display: flex;
-    gap: 1rem;
-    list-style-type: none;
+    justify-content: center;
 }
-.navbarSections li:hover{
-    background-color: rgba(58, 47, 0, 0.76);
-    border-radius: 5px;
-}
-.navbarSections li a{
-    color: white;
+
+.links{
+    color: rgb(232, 228, 228);
     text-decoration: none;
-    padding: 1rem;
 }
-.navbarSections li a:visited{
-    color: white;
-    text-decoration: none;
+.links:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, 0px 0px 0px rgba(206,191,20,0);
 }
 .categories{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+.green{
+    color: rgb(1, 181, 1);
+}
+
+@media (max-width: 626px){
+    nav{
+        padding: 1rem 1rem;
+    }
+    .categories{
+        order: 2;
+        gap: .5rem;
+        font-size: x-small;
+        margin: .7rem;
+    }
+}
+

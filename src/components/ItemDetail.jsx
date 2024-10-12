@@ -7,15 +7,15 @@ const ItemDetail = ({ product }) => {
       return <p>Cargando...</p>;
     }
   
-    const { title, brand, description, price, imageUrl, stock } = product;
+    const { title, brand, description, price, imageUrl, stock, features, category } = product;
   
     const capitalizeFirstLetter = (text) => {
         return text.charAt(0).toUpperCase() + text.slice(1);
     };
     
-    const removeFirstWord = (title) => {
+    const removeFirstWord = (title, brand) => {
         const words = title.split(" ");
-        return words.slice(1).join(" ");
+        return words[0] === brand ? words.slice(1).join(" ") : title;
     };
     
     const addFinalDot = (description) => {
@@ -47,7 +47,16 @@ const ItemDetail = ({ product }) => {
                     <h2 className={styles.itemDetailTitle}>{removeFirstWord(title)}</h2>
                     <p className={styles.itemDetailPrice}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
                     <p className={styles.itemDetailDescription}>{capitalizeFirstLetter(addFinalDot(description))}</p>
+                    <p className={styles.itemDetailDescription}>Categoría: {capitalizeFirstLetter(category)}</p>
                     <p>Stock: {stock}</p>
+                </div>
+                <div className={styles.featuresContainer}>
+                        <h3>Características:</h3>
+                        <ul>
+                            {features.map((feature, index) => (
+                                <li key={index} className={styles.features}>{feature}</li>
+                            ))}
+                        </ul>
                 </div>
                 <ItemCount stock={stock}/>
             </div>

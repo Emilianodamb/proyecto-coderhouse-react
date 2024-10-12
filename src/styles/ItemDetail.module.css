@@ -43,7 +43,7 @@
 .infoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -61,6 +61,16 @@
 .itemDetailDescription {
     margin-bottom: 1rem;
     color: #666;
+}
+
+.featuresContainer ul li{
+    list-style-type: none;
+}
+
+.features{
+    color: rgb(93, 93, 93);
+    padding-left: .5rem;
+    padding-top: .5rem;
 }
 
 

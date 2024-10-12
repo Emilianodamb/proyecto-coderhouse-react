@@ -1,40 +1,35 @@
 import CartWidget from "./CartWidget.jsx";
 import styles from "../styles/NavBar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.nav}>
       <div className={styles.navbarBrand}>
-        <p>TheMobileShop</p>
+        <NavLink className={styles.links} to={"/"}>
+          <p className={styles.brand}>TheMobil<strong className={styles.green}>eShop</strong></p>
+        </NavLink>
       </div>
       <ul className={styles.categories}>
         <li>
-
-            <NavLink to={"/"}>
-              Home
+            <NavLink className={styles.links} to={"/category/top"}>
+              TOP GAMMA
             </NavLink>
-
         </li>
         <li>
-
-            <NavLink to={"/brand/Apple"}>Apple</NavLink>
-
-        </li>
-        
-        <li>
-
-            qwrqw
-
+            <NavLink className={styles.links} to={"/category/mid"}>
+              MIDDLE GAMMA
+            </NavLink>
         </li>
         <li>
-
-            558796
-
-          </li>
+            <NavLink className={styles.links} to={"/category/offer"}>
+              IN OFFER
+            </NavLink>
+        </li>
       </ul>
       <CartWidget />
+      
     </nav>
   );
 }

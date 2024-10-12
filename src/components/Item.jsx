@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "../styles/Item.module.css";
 import ItemCount from "./ItemCount.jsx";
+import { NavLink } from "react-router-dom";
 
 const capitalizeFirstLetter = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const removeFirstWord = (title) => {
+const removeFirstWord = (title, brand) => {
     const words = title.split(" ");
-    return words.slice(1).join(" ");
+    return words[0] === brand ? words.slice(1).join(" ") : title;
 };
 
 const addFinalDot = (description) => {
@@ -25,9 +26,17 @@ const Item = ({item}) => {
             <img src={item.imageUrl} alt={item.title}/>
             <div className={styles.itemInfo}>
                 <b>{item.brand}</b>
-                <h2>{removeFirstWord(item.title)}</h2>
+                <NavLink className={styles.links} to={`/item/${item.id}`}>
+                    <h2>{removeFirstWord(item.title, item.brand)}</h2>
+                </NavLink>
                 <span className={styles.itemDescription}>{addFinalDot(capitalizeFirstLetter(item.description))}</span>
-                <span className={styles.itemStock}>Stock: {item.stock}</span>
+                <div className={styles.itemInfoDetails}>
+                    <span className={styles.itemStock}>Stock: {item.stock}</span>
+                    <NavLink className={styles.links} to={`/item/${item.id}`} >
+                        Ver Detalles
+                    </NavLink>
+                </div>
+                
                 <div className={styles.itemInfoFooter}>
                     <span className={styles.itemPrice}>{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
                     <ItemCount stock={item.stock}/>
