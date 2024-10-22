@@ -13,7 +13,6 @@ const removeFirstWord = (title, brand) => {
 };
 
 const addFinalDot = (description) => {
-    
     if (!description.endsWith('.')) {
         return description + '.';
     }
@@ -32,14 +31,14 @@ const Item = ({item}) => {
                 <span className={styles.itemDescription}>{addFinalDot(capitalizeFirstLetter(item.description))}</span>
                 <div className={styles.itemInfoDetails}>
                     <span className={styles.itemStock}>Stock: {item.stock}</span>
-                    <NavLink className={styles.links} to={`/item/${item.id}`} >
-                        Ver Detalles
-                    </NavLink>
+                    
                 </div>
                 
                 <div className={styles.itemInfoFooter}>
                     <span className={styles.itemPrice}>{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
-                    <ItemCount stock={item.stock}/>
+                    <NavLink className={styles.links} to={`/item/${item.id}`} >
+                        <button>Ver Detalles / Comprar</button>
+                    </NavLink>
                 </div>
             </div>
         </div>

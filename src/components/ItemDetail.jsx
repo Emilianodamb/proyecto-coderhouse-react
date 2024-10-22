@@ -1,25 +1,35 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount.jsx";
 import styles from "../styles/ItemDetail.module.css";
+import { Cart } from "../context/CartProvider.jsx";
+import { NavLink } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
+    const {addCart} = useContext(Cart)
+    const [itemCountVisibility, setItemCountVisibility] = useState(true)
+    console.log(product)
+
+    const handleCart = (quantity) => {
+        if (isNaN(quantity) || quantity <= 0) {
+            console.error('Cantidad inválida:', quantity);
+            return;
+        }
+        setItemCountVisibility(false)
+        addCart(product, quantity)
+    }
+
     if (!product) {
       return <p>Cargando...</p>;
     }
-  
     const { title, brand, description, price, imageUrl, stock, features, category } = product;
-  
     const capitalizeFirstLetter = (text) => {
         return text.charAt(0).toUpperCase() + text.slice(1);
     };
-    
     const removeFirstWord = (title, brand) => {
         const words = title.split(" ");
         return words[0] === brand ? words.slice(1).join(" ") : title;
     };
-    
     const addFinalDot = (description) => {
-        
         if (!description.endsWith('.')) {
             return description + '.';
         }
@@ -58,7 +68,7 @@ const ItemDetail = ({ product }) => {
                             ))}
                         </ul>
                 </div>
-                <ItemCount stock={stock}/>
+                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={stock}/>) : (<button><NavLink to={'/cart'}>Go cart</NavLink></button>)}
             </div>
         </div>
     );

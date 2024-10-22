@@ -1,8 +1,14 @@
 import CartWidget from "./CartWidget.jsx";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
+import Switch from "./Switch.jsx";
+import { useContext, useState } from "react";
+import { Theme } from "../context/ThemeProvider.jsx";
 
 const NavBar = () => {
+
+  //Consumir el contexto theme
+  const {dark, setDark} = useContext(Theme)
 
   return (
     <nav className={styles.nav}>
@@ -27,8 +33,13 @@ const NavBar = () => {
               IN OFFER
             </NavLink>
         </li>
+        <li>
+          <Switch checked={dark} setChecked={setDark}/>
+        </li>
       </ul>
-      <CartWidget />
+      <NavLink to={'/cart'}>
+          <CartWidget />
+      </NavLink>
       
     </nav>
   );
