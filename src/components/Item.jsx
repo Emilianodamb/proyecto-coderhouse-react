@@ -22,7 +22,7 @@ const addFinalDot = (description) => {
 const Item = ({item}) => {
     return (
         <div className={styles.itemContainer}>
-            <img src={item.imageUrl} alt={item.title}/>
+            <img src={item.pictureUrl} alt={item.title}/>
             <div className={styles.itemInfo}>
                 <b>{item.brand}</b>
                 <NavLink className={styles.links} to={`/item/${item.id}`}>

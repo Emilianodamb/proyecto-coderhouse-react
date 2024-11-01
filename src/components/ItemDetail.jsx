@@ -21,7 +21,7 @@ const ItemDetail = ({ product }) => {
     if (!product) {
       return <p>Cargando...</p>;
     }
-    const { title, brand, description, price, imageUrl, stock, features, category } = product;
+    const { title, brand, description, price, pictureUrl, stock, features, category } = product;
     const capitalizeFirstLetter = (text) => {
         return text.charAt(0).toUpperCase() + text.slice(1);
     };
@@ -40,14 +40,14 @@ const ItemDetail = ({ product }) => {
         <div className={styles.itemDetailContainer}>
             <div className={styles.galleryContainer}>
                 <div className={styles.galleryImageOptions}>
-                    <img src={imageUrl} alt={title} />
-                    <img src={imageUrl} alt={title} />
-                    <img src={imageUrl} alt={title} />
-                    <img src={imageUrl} alt={title} />
-                    <img src={imageUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
                 </div>
                 <div className={styles.galleryMainImage}>
-                    <img src={imageUrl} alt={title} />
+                    <img src={pictureUrl} alt={title} />
                 </div>
 
             </div>
