@@ -12,29 +12,6 @@ const Cart = () => {
     const { cart } = useContext(CartContext)
     console.log({ cart })
 
-    const handlePurchase = () => {
-        const order = {
-            buyer: {
-                name: "Emilio",
-                lastName: "Baquiano",
-                email: "elbaquiano@latest.com",
-            },
-            products: cart,
-            total: 1245,
-            timestamp: serverTimestamp()
-        }
-
-        ;(async()=>{
-            try {
-                // Add a new document with a generated id.
-                const docRef = await addDoc(collection(db, "orders"), order);
-                console.log("Document written with ID: ", docRef.id);
-            } catch (error) {
-                console.log(error)
-            }
-        })()
-    }
-
     return (
         <div className={styles.container}>
             {cart.length ? (

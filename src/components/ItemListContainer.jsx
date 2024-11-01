@@ -24,14 +24,12 @@ const ItemListContainer = () => {
 
           const querySnapshot = await getDocs(q);
           querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data());
             productsFiltered.push({id: doc.id, ...doc.data()})
           });
 
         } else {
           const querySnapshot = await getDocs(collection(db, "products"))
           querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`)
             productsFiltered.push({id: doc.id, ...doc.data()})
           });  
         }
