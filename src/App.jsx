@@ -18,7 +18,7 @@ function App() {
           <BrowserRouter>
             <Layout>
               <Routes>
-                <Route path="/" element = {<Events />}/>
+                <Route path="/" element = {<ItemListContainer />}/>
                 <Route path="/category/:categoryId" element = {<ItemListContainer />} />
                 <Route path="/item/:id" element = {<ItemDetailContainer />} />
                 <Route path="*" element = {<NotFound />}/>
