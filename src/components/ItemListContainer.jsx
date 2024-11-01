@@ -3,6 +3,8 @@ import products from "../assets/mockData.json";
 import ItemList from "./ItemList.jsx";
 import styles from "../styles/ItemListContainer.module.css";
 import { useParams } from "react-router-dom";
+import { db } from "../firebase/config.js"
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -10,38 +12,24 @@ const ItemListContainer = () => {
   const {categoryId} = useParams();
 
   useEffect(() => {
-    setLoading(true); // Iniciamos el estado de loading en true al comenzar la carga
 
-    const fetchProducts = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(products);
-        }, 2000);
-      });
-    };
+    (async ()=> {
+      let productsFiltered = []
 
-    fetchProducts()
-      .then((resolvedProducts) => {
-        let productsFiltered;
-        if (categoryId) {
-          productsFiltered = resolvedProducts.filter(product => product.category === categoryId);
-        } else {
-          productsFiltered = resolvedProducts;
-        }
-        setItems(productsFiltered); // Guardamos los productos filtrados
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        setLoading(false); // Cambiamos el estado de loading a false cuando termina la carga
+      const querySnapshot = await getDocs(collection(db, "products"))
+      querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`)
+        productsFiltered.push({id: doc.id, ...doc.data()})
       });
 
-  }, [categoryId]); // Se ejecuta cuando cambia la categoría
+      setItems(productsFiltered)
+    })()
+
+  }, [categoryId]);
 
   return (
     <>
-      {loading ? (<p>Cargando productos...</p>) : (<ItemList products={items} />)/*Mostramos el mensaje mientras loading es true*/}
+      <ItemList products={items} />
     </>
   );
 };
