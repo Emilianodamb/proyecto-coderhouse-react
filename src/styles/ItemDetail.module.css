@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 1rem 5rem;
     gap: 1rem;
-    background-color: #f4f4f48f;
+    background-color: #f4f4f42f;
     backdrop-filter: blur(4px);
 }
 
@@ -52,25 +52,71 @@
     margin: 0.5rem 0;
 }
 
-.itemDetailPrice {
+.itemDetailPrice-light {
     font-size: 1.25rem;
     color: #333;
     margin: 0.5rem 0;
 }
+.itemDetailPrice-dark {
+    font-size: 1.25rem;
+    color: goldenrod;
+    margin: 0.5rem 0;
+}
 
-.itemDetailDescription {
+.itemDetailDescription-light {
     margin-bottom: 1rem;
     color: #666;
 }
-
-.featuresContainer ul li{
-    list-style-type: none;
+.itemDetailDescription-dark {
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-.features{
+.features-light{
+    list-style-type: none;
     color: rgb(93, 93, 93);
     padding-left: .5rem;
     padding-top: .5rem;
+}
+
+.features-dark{
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+.itemStock-light{
+    font-size: x-small;
+    color: #3b3232bc;
+    display: inline-block;
+}
+.itemStock-dark{
+    font-size: x-small;
+    display: inline-block;
+    color: rgb(144, 214, 74);
+}
+
+
+
+.goCartButton{
+    color: white;
+    text-decoration: none;
+    border: 0;
+    border-radius: 5px;
+    text-shadow: .25px .25px 1px black ;
+    font-weight: 500;
+    background-color: rgb(1, 181, 1);
+    padding: .4rem;
+}
+
+.goCartButton:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.goCartButton:hover{
+    background-color: rgb(3, 168, 3);
 }
 
 

@@ -1,18 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
-//1. Crear contexto
 export const Cart = createContext()
 
-//2. Crear el componente que va a proveer ese contexto <NombreProvider>
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [quantity, setQuantity] = useState(0)
 
     const addCart = (product, productQuantity) => {
         const productInCart = isInCart(product.id);
-        console.log(productInCart);
-        console.log("quantity:", productQuantity);
-    
         let cartUpdated = [...cart];
     
         if (productInCart) {
@@ -36,6 +31,11 @@ const CartProvider = ({ children }) => {
     const isInCart = (productId) => {
         return cart.some(cartProduct => cartProduct.id === productId )
     }
+
+    useEffect(()=>{
+        const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0)
+        setQuantity(totalQuantity)
+    },[cart])
 
     return(
         <Cart.Provider value={{cart, addCart, quantity}}>{children}</Cart.Provider>

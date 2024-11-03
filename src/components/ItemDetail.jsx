@@ -3,11 +3,12 @@ import ItemCount from "./ItemCount.jsx";
 import styles from "../styles/ItemDetail.module.css";
 import { Cart } from "../context/CartProvider.jsx";
 import { NavLink } from "react-router-dom";
+import { Theme } from "../context/ThemeProvider.jsx"
 
 const ItemDetail = ({ product }) => {
     const {addCart} = useContext(Cart)
+    const {dark} = useContext(Theme)
     const [itemCountVisibility, setItemCountVisibility] = useState(true)
-    console.log(product)
 
     const handleCart = (quantity) => {
         if (isNaN(quantity) || quantity <= 0) {
@@ -16,10 +17,6 @@ const ItemDetail = ({ product }) => {
         }
         setItemCountVisibility(false)
         addCart(product, quantity)
-    }
-
-    if (!product) {
-      return <p>Cargando...</p>;
     }
     const { title, brand, description, price, pictureUrl, stock, features, category } = product;
     const capitalizeFirstLetter = (text) => {
@@ -49,26 +46,28 @@ const ItemDetail = ({ product }) => {
                 <div className={styles.galleryMainImage}>
                     <img src={pictureUrl} alt={title} />
                 </div>
-
             </div>
             <div className={styles.infoContainer}>
                 <div>
                     <p>{brand}</p>
                     <h2 className={styles.itemDetailTitle}>{removeFirstWord(title)}</h2>
-                    <p className={styles.itemDetailPrice}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
-                    <p className={styles.itemDetailDescription}>{capitalizeFirstLetter(addFinalDot(description))}</p>
+                    <p className={styles[`itemDetailPrice-${dark ? "dark" : "light"}`]}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
+                    <p className={styles[`itemDetailDescription-${dark ? "dark" : "light"}`]}>{capitalizeFirstLetter(addFinalDot(description))}</p>
                     <p className={styles.itemDetailDescription}>Categoría: {capitalizeFirstLetter(category)}</p>
-                    <p>Stock: {stock}</p>
+                    <p className={styles[`itemStock-${dark ? "dark" : "light"}`]}>Stock: {stock}</p>
+                </div>
+                <div>
+                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={stock}/>) : (<NavLink to={'/cart'}><button className={styles.goCartButton}>Go cart</button></NavLink>)}
                 </div>
                 <div className={styles.featuresContainer}>
                         <h3>Características:</h3>
                         <ul>
                             {features.map((feature, index) => (
-                                <li key={index} className={styles.features}>{feature}</li>
+                                <li key={index} className={styles[`features-${dark ? "dark" : "light"}`]}>{feature}</li>
                             ))}
                         </ul>
                 </div>
-                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={stock}/>) : (<button><NavLink to={'/cart'}>Go cart</NavLink></button>)}
+                
             </div>
         </div>
     );

@@ -26,10 +26,15 @@
     flex-direction: column;
     text-align: justify;
 }
-.itemStock{
+.itemStock-light{
     font-size: x-small;
     color: #3b3232bc;
     display: inline-block;
+}
+.itemStock-dark{
+    font-size: x-small;
+    display: inline-block;
+    color: rgb(144, 214, 74);
 }
 .links{
     font-size: x-small;
@@ -45,17 +50,32 @@
 .itemDescription{
     font-size: small;
 }
-.itemPrice {
+.itemPrice-light {
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
 }
+.itemPrice-dark {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: goldenrod;
+}
+
 .itemInfoFooter{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: auto;
     gap: 4px;
+}
+.addToCartButton{
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    text-shadow: .25px .25px 1px black ;
+    font-weight: 500;
+    background-color: rgb(1, 181, 1);
+    padding: .4rem;
 }
 
 

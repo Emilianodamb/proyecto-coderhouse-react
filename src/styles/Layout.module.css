@@ -1,4 +1,15 @@
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-container-light{
+    flex-grow: 1;
+}
+
 .main-container-dark{
     color: white;
     background-color: black;
+    flex-grow: 1;
 }

@@ -1,0 +1,49 @@
+.cartItemContainer{
+    display: flex;
+    align-items: center;
+    padding: 1rem .5rem;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+.id{
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    height: 100px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    color: rgb(205, 124, 43);
+}
+
+.deleteButton{
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    text-shadow: .25px .25px 1px black ;
+    font-weight: 500;
+    background-color: rgb(211, 8, 8);
+    padding: .4rem;
+}
+.deleteButton:hover{
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    text-shadow: .25px .25px 1px black ;
+    font-weight: 500;
+    background-color: rgb(188, 7, 7);
+    padding: .4rem;
+}
+
+
+
+

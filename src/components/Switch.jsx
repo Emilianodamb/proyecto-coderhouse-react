@@ -3,7 +3,7 @@ import styles from '../styles/Switch.module.css'
 const Switch = ({ checked, setChecked }) => {
     return (
         <div className={styles.container}>
-            <span>Dark mode</span>
+            <span>Dark mode </span>
             <label className={styles.switch}>
                 <input
                     type="checkbox"

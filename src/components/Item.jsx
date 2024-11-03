@@ -1,7 +1,7 @@
-import React from "react";
+import {React, useContext} from "react";
 import styles from "../styles/Item.module.css";
-import ItemCount from "./ItemCount.jsx";
 import { NavLink } from "react-router-dom";
+import { Theme } from "../context/ThemeProvider.jsx"
 
 const capitalizeFirstLetter = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
@@ -20,6 +20,8 @@ const addFinalDot = (description) => {
 };
 
 const Item = ({item}) => {
+    const {dark} = useContext(Theme)
+
     return (
         <div className={styles.itemContainer}>
             <img src={item.pictureUrl} alt={item.title}/>
@@ -30,14 +32,12 @@ const Item = ({item}) => {
                 </NavLink>
                 <span className={styles.itemDescription}>{addFinalDot(capitalizeFirstLetter(item.description))}</span>
                 <div className={styles.itemInfoDetails}>
-                    <span className={styles.itemStock}>Stock: {item.stock}</span>
-                    
+                    <span className={styles[`itemStock-${dark ? "dark" : "light"}`]}>Stock: {item.stock}</span>
                 </div>
-                
                 <div className={styles.itemInfoFooter}>
-                    <span className={styles.itemPrice}>{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
+                    <span className={styles[`itemPrice-${dark ? "dark" : "light"}`]}>{item.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</span>
                     <NavLink className={styles.links} to={`/item/${item.id}`} >
-                        <button>Ver Detalles / Comprar</button>
+                        <button className={styles.addToCartButton}>Ver Detalles / Comprar</button>
                     </NavLink>
                 </div>
             </div>
