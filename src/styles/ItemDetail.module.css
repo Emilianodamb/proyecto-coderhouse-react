@@ -72,6 +72,10 @@
     color: #ffffff;
 }
 
+.featuresContainer{
+    padding: 1rem 0;
+}
+
 .features-light{
     list-style-type: none;
     color: rgb(93, 93, 93);
@@ -97,7 +101,10 @@
     color: rgb(144, 214, 74);
 }
 
-
+.conditionalButtons{
+    display: flex;
+    gap: .5rem;
+}
 
 .goCartButton{
     color: white;
@@ -160,21 +167,14 @@
         flex-direction: column;
         align-items: center;
     }
-
-
-
-    
-
     .infoContainer {
         align-items: center;
         text-align: center;
     }
-
     .itemDetailTitle, .itemDetailPrice, .itemDetailDescription {
         text-align: center;
     }
 }
-
 
 @media (max-width: 425px){
     .galleryMainImage{

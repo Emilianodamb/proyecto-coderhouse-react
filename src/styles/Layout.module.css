@@ -5,10 +5,16 @@
 }
 
 .main-container-light{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     flex-grow: 1;
 }
 
 .main-container-dark{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     color: white;
     background-color: black;
     flex-grow: 1;

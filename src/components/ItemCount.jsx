@@ -18,9 +18,9 @@ const ItemCount = ({addCart, stock}) => {
   return (
     <div className={styles.cardButtons}>
         <div className={styles.cardItemQuantity}>
-            <button onClick={onDecrease}>-</button>
+            <button className={styles.controlButton} onClick={onDecrease}>▼</button>
             <p>{count}</p>
-            <button onClick={onAdd}>+</button>
+            <button className={styles.controlButton} onClick={onAdd}>▲</button>
         </div>
         <button className={styles.addToCartButton} onClick={() => addCart(count)}>Agregar</button>
     </div>

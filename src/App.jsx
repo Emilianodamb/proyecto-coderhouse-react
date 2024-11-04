@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NotFound from './components/NotFound.jsx'
 import ThemeProvider from './context/ThemeProvider.jsx'
 import CartProvider from './context/CartProvider.jsx'
-import Events from "./components/Events.jsx"
 import Cart from "./components/Cart.jsx"
 
 function App() {

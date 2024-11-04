@@ -9,6 +9,7 @@
 .id{
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 
 .img{
@@ -45,5 +46,12 @@
 }
 
 
-
+@media (max-width: 768px) {
+    .container{
+        font-size: x-small;
+    }
+    .title{
+        font-size: medium;
+    }
+}
 

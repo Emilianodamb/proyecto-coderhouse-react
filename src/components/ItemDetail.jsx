@@ -51,13 +51,20 @@ const ItemDetail = ({ product }) => {
                 <div>
                     <p>{brand}</p>
                     <h2 className={styles.itemDetailTitle}>{removeFirstWord(title)}</h2>
-                    <p className={styles[`itemDetailPrice-${dark ? "dark" : "light"}`]}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
                     <p className={styles[`itemDetailDescription-${dark ? "dark" : "light"}`]}>{capitalizeFirstLetter(addFinalDot(description))}</p>
                     <p className={styles.itemDetailDescription}>Categoría: {capitalizeFirstLetter(category)}</p>
                     <p className={styles[`itemStock-${dark ? "dark" : "light"}`]}>Stock: {stock}</p>
+                    <p className={styles[`itemDetailPrice-${dark ? "dark" : "light"}`]}>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
                 </div>
                 <div>
-                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={stock}/>) : (<NavLink to={'/cart'}><button className={styles.goCartButton}>Go cart</button></NavLink>)}
+                {itemCountVisibility ? 
+                (<ItemCount addCart={handleCart} stock={stock}/>) : 
+                (
+                    <div className={styles.conditionalButtons}>
+                        <NavLink to={'/'}><button className={styles.goCartButton}>Continue Buying</button></NavLink>
+                        <NavLink to={'/cart'}><button className={styles.goCartButton}>Go cart</button></NavLink>
+                    </div>
+                )}
                 </div>
                 <div className={styles.featuresContainer}>
                         <h3>Características:</h3>

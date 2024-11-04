@@ -28,3 +28,9 @@
 .addToCartButton:hover{
     background-color: rgb(3, 168, 3);
 }
+.controlButton{
+    border: 0;
+    background-color: bisque;
+    border-radius: 50%;
+    font-size: xx-small;
+}

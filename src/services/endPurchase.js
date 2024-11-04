@@ -1,87 +1,83 @@
-import { addDoc, collection, doc, runTransaction, serverTimestamp } from "firebase/firestore"
-import { db } from "../firebase/config.js"
+import { addDoc, collection, doc, runTransaction, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase/config.js";
 
-const endPurchase = async (cart) => {
-    const productsToUpdateRefs = []
+const endPurchase = async (cart, clientData) => {
+    const productsToUpdateRefs = [];
 
-    // Create an array of references to all the products in cart.
+    // 1. Crear referencias a los productos en el carrito para verificar el stock
     for (const cartProduct of cart) {
-        const productRef = doc(db, "products", cartProduct.id)
-        productsToUpdateRefs.push({ ref: productRef, id: cartProduct.id })
+        const productRef = doc(db, "products", cartProduct.id);
+        productsToUpdateRefs.push({ ref: productRef, id: cartProduct.id });
     }
 
-    // Create a ref for orders collection
-    const orderCollectionRef = collection(db, "orders")
+    const orderCollectionRef = collection(db, "orders");
 
     try {
+        // 2. Ejecutar la transacción para actualizar el stock y crear la orden
         const order = await runTransaction(db, async (transaction) => {
-            //Create an auxiliar array for stocks to be updated
-            const stocksUpdated = []
+            const stocksUpdated = [];
 
-            //1. Check valid stock of every product in cart
+            // Verificar el stock y calcular el nuevo stock para cada producto en el carrito
             for (const productToUpdate of productsToUpdateRefs) {
-                const { ref } = productToUpdate
-                const product = await transaction.get(ref)
-                if (!product.exists()) {
-                    throw "Product does not exist!"
-                }
-                console.log({ data: { ...product.data() } })
+                const { ref } = productToUpdate;
+                const product = await transaction.get(ref);
 
-                //Product in cart in order to know the quantity in cart
+                if (!product.exists()) {
+                    throw "Product does not exist!";
+                }
+
                 const productInCart = cart.find(
                     (cartElement) => cartElement.id === product.id
-                )
+                );
 
-                console.log({ productInCart })
+                const resultStock = product.data().stock - productInCart.quantity;
 
-                //Check the resulting stock
-                const resultStock =
-                    product.data().stock - productInCart.quantity
-
-                if (resultStock < 0)
+                if (resultStock < 0) {
                     throw `Product: ${
                         product.data().title
-                    }, doesn't have enough stock. Stock: ${
+                    } doesn't have enough stock. Stock: ${
                         product.data().stock
-                    }, quantity added to cart: ${productInCart.quantity}.`
+                    }, quantity added to cart: ${productInCart.quantity}.`;
+                }
 
-                //Add the result stock to the auxiliary array
                 stocksUpdated.push({
                     productId: product.id,
                     stock: resultStock,
-                })
+                });
             }
 
-            //2. Update the stock of the products (writing procedures must be after reading procedures)
+            // Actualizar el stock de cada producto en la base de datos
             for (const product of productsToUpdateRefs) {
-                const { ref, id } = product
+                const { ref, id } = product;
                 const stockUpdated = stocksUpdated.find(
                     (stock) => stock.productId === id
-                )
-                console.log({ stockUpdated })
+                );
+
                 transaction.update(ref, {
                     stock: stockUpdated.stock,
-                })
+                });
             }
 
-            //3. Creates the order, no id is given
+            // 3. Crear la orden en la base de datos, incluyendo los datos del cliente
             const order = {
-                products: {...cart},
+                products: [...cart],
+                total: cart.reduce((acc, item) => acc + (item.price * item.quantity), 0),
                 user: {
-                    name: "Sebas"
+                    name: clientData.name,
+                    phone: clientData.phone,
+                    email: clientData.email
                 },
-                tiemstamp: serverTimestamp()
-            }
-            console.log(order)
-            addDoc(orderCollectionRef, order)
-            return order
-        })
+                timestamp: serverTimestamp(),
+            };
 
-        console.log("Order created successfully!", order)
+            await addDoc(orderCollectionRef, order);
+            return order;
+        });
+
+        console.log("Order created successfully!", order);
     } catch (e) {
-        //Any throw in try block will be caught
-        console.error(e)
+        console.error("Error creating order: ", e);
     }
-}
+};
 
-export default endPurchase
+export default endPurchase;
