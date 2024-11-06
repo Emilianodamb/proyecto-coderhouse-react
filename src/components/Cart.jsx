@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import { Cart as CartContext } from "../context/CartProvider.jsx";
 import CartItem from "./CartItem.jsx";
 import Checkout from "./Checkout.jsx";
-import OrderModal from "./OrderModal.jsx"; // Importar el modal de orden
+import OrderModal from "./OrderModal.jsx";
 import styles from "../styles/Cart.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const Cart = () => {
     const { cart, total, removeItem } = useContext(CartContext);
     const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);
     const [purchaseCompleted, setPurchaseCompleted] = useState(false);
-    const [isModalVisible, setIsModalVisible] = useState(false); // Estado para el modal
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [orderData, setOrderData] = useState(null);
     const openButtonRef = useRef(null);
 
@@ -24,7 +24,7 @@ const Cart = () => {
     const handleCheckoutClose = (order) => {
         setIsCheckoutVisible(false);
         setPurchaseCompleted(true);
-        setOrderData(order);  // Guardar la orden generada para el modal
+        setOrderData(order);
     };
 
     const handleShowTicket = () => {

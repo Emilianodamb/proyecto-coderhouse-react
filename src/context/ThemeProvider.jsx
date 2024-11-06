@@ -1,9 +1,7 @@
 import { createContext, useState } from "react";
 
-//1. Crear contexto
 export const Theme = createContext()
 
-//2. Crear el componente que va a proveer ese contexto <NombreProvider>
 const ThemeProvider = ({ children }) => {
     const [dark, setDark] = useState(false)
 

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styles from "../styles/OrderModal.module.css"; // Asegúrate de crear los estilos
+import styles from "../styles/OrderModal.module.css";
 import { Theme } from "../context/ThemeProvider.jsx"
 
 const OrderModal = ({ orderData, onClose }) => {

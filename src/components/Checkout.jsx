@@ -53,15 +53,15 @@ const Checkout = ({ cart, onClose }) => {
                 <div>
                     <button onClick={notify} type="submit">Confirmar Compra</button>
                     <ToastContainer 
-                    position="top-center"
-                    autoClose={4000}
-                    hideProgressBar={false}
-                    newestOnTop={true}
-                    rtl={false}
-                    pauseOnFocusLoss
-                    pauseOnHover={false}
-                    theme="colored"
-                    transition: Bounce
+                        position="top-center"
+                        autoClose={4000}
+                        hideProgressBar={false}
+                        newestOnTop={true}
+                        rtl={false}
+                        pauseOnFocusLoss
+                        pauseOnHover={false}
+                        theme="colored"
+                        transition: Bounce
                     />
                 </div>
             </form>

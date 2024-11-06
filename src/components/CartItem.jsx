@@ -3,7 +3,7 @@ import styles from "../styles/CartItem.module.css";
 
 const CartItem = ({ item, onRemove }) => {
     const handleDelete = () => {
-        onRemove(item.id); // Llama a la función para eliminar el ítem
+        onRemove(item.id);
     };
 
     return (

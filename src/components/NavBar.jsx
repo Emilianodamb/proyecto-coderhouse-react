@@ -6,8 +6,6 @@ import { useContext, useState } from "react";
 import { Theme } from "../context/ThemeProvider.jsx";
 
 const NavBar = () => {
-
-  //Consumir el contexto theme
   const {dark, setDark} = useContext(Theme)
 
   return (

@@ -62,7 +62,7 @@ const endPurchase = async (cart, clientData) => {
             };
 
             const orderRef = await addDoc(orderCollectionRef, orderData);
-            return { id: orderRef.id, ...orderData }; // Retorna id junto a los datos de la orden
+            return { id: orderRef.id, ...orderData };
         });
 
         return order;
