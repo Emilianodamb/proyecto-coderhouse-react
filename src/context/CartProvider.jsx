@@ -30,25 +30,26 @@ const CartProvider = ({ children }) => {
         return cart.some(cartProduct => cartProduct.id === productId);
     };
 
-    // Función para eliminar un ítem del carrito
     const removeItem = (itemId) => {
         setCart((prevCart) => prevCart.filter(item => item.id !== itemId));
     };
 
-    // Calcula la cantidad total usando useMemo
+    const clearCart = () => {
+        setCart([]);
+    };
+
     const quantity = useMemo(() => 
         cart.reduce((acc, item) => acc + item.quantity, 0),
         [cart]
     );
 
-    // Calcula el total usando useMemo
     const total = useMemo(() => 
         cart.reduce((acc, item) => acc + (item.price * item.quantity), 0),
         [cart]
     );
 
     return (
-        <Cart.Provider value={{ cart, addCart, removeItem, quantity, total }}>
+        <Cart.Provider value={{ cart, addCart, removeItem, clearCart, quantity, total }}>
             {children}
         </Cart.Provider>
     );
