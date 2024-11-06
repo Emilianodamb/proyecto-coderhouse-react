@@ -8,7 +8,9 @@ import ThemeProvider from './context/ThemeProvider.jsx'
 import CartProvider from './context/CartProvider.jsx'
 import Cart from "./components/Cart.jsx"
 
+
 function App() {
+  const notify = () => toast("Generando orden...");
 
   return (
     <div className="background">

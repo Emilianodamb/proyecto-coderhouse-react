@@ -6,6 +6,7 @@ import OrderModal from "./OrderModal.jsx"; // Importar el modal de orden
 import styles from "../styles/Cart.module.css";
 import { NavLink } from "react-router-dom";
 
+
 const Cart = () => {
     const { cart, total, removeItem } = useContext(CartContext);
     const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);

@@ -1,21 +1,27 @@
-/* src/styles/Checkout.module.css */
+.title{
+    color: black;
+    padding-bottom: 1rem;
+}
 
 .checkoutContainer {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.checkoutContainer h1 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    background-color: #f9f9f9a6;
+    align-items: center;
+    width: fit-content;
+    align-self: center;
+    box-shadow: black 0px 1px 1px 1px;
+    margin-bottom: .5rem;
 }
 
 .checkoutContainer form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .checkoutContainer input {
@@ -24,9 +30,10 @@
     font-size: 1em;
 }
 
-.checkoutContainer button {
+.checkoutContainer form div button {
     margin-top: 10px;
     padding: 10px;
     font-size: 1em;
     cursor: pointer;
+    background-color: lightgreen;
 }

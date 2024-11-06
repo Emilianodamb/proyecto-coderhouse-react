@@ -2,8 +2,11 @@ import React, { useState, useContext } from "react";
 import styles from "../styles/Checkout.module.css";
 import endPurchase from "../services/endPurchase.js";
 import { Cart as CartContext } from "../context/CartProvider.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = ({ cart, onClose }) => {
+    const notify = () => toast.info('Generando la orden...');
     const { clearCart } = useContext(CartContext);
     const [clientData, setClientData] = useState({
         name: "",
@@ -16,7 +19,7 @@ const Checkout = ({ cart, onClose }) => {
         try {
             const order = await endPurchase(cart, clientData);
             clearCart();
-            onClose(order); // Pasa la orden completa a Cart.jsx
+            onClose(order);
         } catch (error) {
             console.error("Error completing purchase: ", error);
         }
@@ -24,7 +27,7 @@ const Checkout = ({ cart, onClose }) => {
 
     return (
         <div className={styles.checkoutContainer}>
-            <h1>Ingresa tus datos para finalizar la compra</h1>
+            <p className={styles.title}>Ingresa tus datos para confirmar la compra</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -47,7 +50,20 @@ const Checkout = ({ cart, onClose }) => {
                     onChange={(e) => setClientData({ ...clientData, email: e.target.value })}
                     required
                 />
-                <button type="submit">Confirmar Compra</button>
+                <div>
+                    <button onClick={notify} type="submit">Confirmar Compra</button>
+                    <ToastContainer 
+                    position="top-center"
+                    autoClose={4000}
+                    hideProgressBar={false}
+                    newestOnTop={true}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    pauseOnHover={false}
+                    theme="colored"
+                    transition: Bounce
+                    />
+                </div>
             </form>
             <button onClick={() => onClose(null)}>Cerrar</button>
         </div>
