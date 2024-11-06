@@ -1,3 +1,49 @@
-.footerContainer{
-    background-color: rgba(0, 0, 0, 0.866);
+nav{
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: rgb(108, 108, 108);
+    text-shadow: 1px 1px black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.navbarBrand{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+
+
+.links{
+    color: rgb(108, 108, 108);
+    text-decoration: none;
+}
+.links:hover{
+    color: rgb(108, 108, 108);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, 0px 0px 0px rgba(206,191,20,0);
+}
+.categories{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 626px){
+    nav{
+        padding: 1rem 1rem;
+    }
+    .categories{
+        order: 2;
+        gap: .5rem;
+        font-size: x-small;
+        margin: .7rem;
+    }
 }

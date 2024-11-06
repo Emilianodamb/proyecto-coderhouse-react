@@ -2,7 +2,7 @@ import CartWidget from "./CartWidget.jsx";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import Switch from "./Switch.jsx";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Theme } from "../context/ThemeProvider.jsx";
 
 const NavBar = () => {
@@ -44,16 +44,3 @@ const NavBar = () => {
 }
 
 export default NavBar;
-
-
-{/*
-  <li>
-    <a>
-      <NavLink className={ ({isActive}) => {
-            return isActive ? styles.isActive : styles.notActive;
-      }} to={"/brand/Motorola"}>
-          Motorola
-      </NavLink>
-    </a>
-  </li> 
-*/}
