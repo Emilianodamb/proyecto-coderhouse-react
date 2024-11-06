@@ -2,6 +2,7 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import { Cart as CartContext } from "../context/CartProvider.jsx";
 import CartItem from "./CartItem.jsx";
 import Checkout from "./Checkout.jsx";
+import OrderModal from "./OrderModal.jsx"; // Importar el modal de orden
 import styles from "../styles/Cart.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -9,6 +10,8 @@ const Cart = () => {
     const { cart, total, removeItem } = useContext(CartContext);
     const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);
     const [purchaseCompleted, setPurchaseCompleted] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(false); // Estado para el modal
+    const [orderData, setOrderData] = useState(null);
     const openButtonRef = useRef(null);
 
     useEffect(() => {
@@ -17,9 +20,18 @@ const Cart = () => {
         }
     }, [isCheckoutVisible]);
 
-    const handleCheckoutClose = () => {
+    const handleCheckoutClose = (order) => {
         setIsCheckoutVisible(false);
-        setPurchaseCompleted(true);  // Marca la compra como completada
+        setPurchaseCompleted(true);
+        setOrderData(order);  // Guardar la orden generada para el modal
+    };
+
+    const handleShowTicket = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalVisible(false);
     };
 
     return (
@@ -45,7 +57,7 @@ const Cart = () => {
             ) : purchaseCompleted ? (
                 <>
                     <h3>¡Compra exitosa!</h3>
-                    <button onClick={() => alert("Mostrando ticket...")}>Mostrar ticket</button>
+                    <button onClick={handleShowTicket}>Mostrar ticket</button>
                 </>
             ) : (
                 <>
@@ -55,10 +67,12 @@ const Cart = () => {
             )}
 
             {isCheckoutVisible && !purchaseCompleted && (
-                <Checkout 
-                    cart={cart} 
-                    onClose={handleCheckoutClose} 
-                />
+                <Checkout cart={cart} onClose={handleCheckoutClose} />
+            )}
+
+            
+            {isModalVisible && (
+                <OrderModal orderData={orderData} onClose={handleCloseModal} />
             )}
         </div>
     );

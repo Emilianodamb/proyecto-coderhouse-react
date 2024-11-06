@@ -4,7 +4,6 @@ import { db } from "../firebase/config.js";
 const endPurchase = async (cart, clientData) => {
     const productsToUpdateRefs = [];
 
-    // 1. Crear referencias a los productos en el carrito para verificar el stock
     for (const cartProduct of cart) {
         const productRef = doc(db, "products", cartProduct.id);
         productsToUpdateRefs.push({ ref: productRef, id: cartProduct.id });
@@ -13,11 +12,9 @@ const endPurchase = async (cart, clientData) => {
     const orderCollectionRef = collection(db, "orders");
 
     try {
-        // 2. Ejecutar la transacción para actualizar el stock y crear la orden
         const order = await runTransaction(db, async (transaction) => {
             const stocksUpdated = [];
 
-            // Verificar el stock y calcular el nuevo stock para cada producto en el carrito
             for (const productToUpdate of productsToUpdateRefs) {
                 const { ref } = productToUpdate;
                 const product = await transaction.get(ref);
@@ -33,11 +30,7 @@ const endPurchase = async (cart, clientData) => {
                 const resultStock = product.data().stock - productInCart.quantity;
 
                 if (resultStock < 0) {
-                    throw `Product: ${
-                        product.data().title
-                    } doesn't have enough stock. Stock: ${
-                        product.data().stock
-                    }, quantity added to cart: ${productInCart.quantity}.`;
+                    throw `Product: ${product.data().title} doesn't have enough stock.`;
                 }
 
                 stocksUpdated.push({
@@ -46,7 +39,6 @@ const endPurchase = async (cart, clientData) => {
                 });
             }
 
-            // Actualizar el stock de cada producto en la base de datos
             for (const product of productsToUpdateRefs) {
                 const { ref, id } = product;
                 const stockUpdated = stocksUpdated.find(
@@ -58,8 +50,7 @@ const endPurchase = async (cart, clientData) => {
                 });
             }
 
-            // 3. Crear la orden en la base de datos, incluyendo los datos del cliente
-            const order = {
+            const orderData = {
                 products: [...cart],
                 total: cart.reduce((acc, item) => acc + (item.price * item.quantity), 0),
                 user: {
@@ -70,13 +61,14 @@ const endPurchase = async (cart, clientData) => {
                 timestamp: serverTimestamp(),
             };
 
-            await addDoc(orderCollectionRef, order);
-            return order;
+            const orderRef = await addDoc(orderCollectionRef, orderData);
+            return { id: orderRef.id, ...orderData }; // Retorna id junto a los datos de la orden
         });
 
-        console.log("Order created successfully!", order);
+        return order;
     } catch (e) {
         console.error("Error creating order: ", e);
+        throw e;
     }
 };
 
