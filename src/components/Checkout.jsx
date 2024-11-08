@@ -13,9 +13,17 @@ const Checkout = ({ cart, onClose }) => {
         phone: "",
         email: ""
     });
+    const [confirmEmail, setConfirmEmail] = useState("");
+    const [emailError, setEmailError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        if (clientData.email !== confirmEmail) {
+            setEmailError("Los correos electrónicos no coinciden");
+            return;
+        }
+
         try {
             const order = await endPurchase(cart, clientData);
             clearCart();
@@ -50,6 +58,14 @@ const Checkout = ({ cart, onClose }) => {
                     onChange={(e) => setClientData({ ...clientData, email: e.target.value })}
                     required
                 />
+                <input
+                    type="email"
+                    placeholder="Confirmar correo electrónico"
+                    value={confirmEmail}
+                    onChange={(e) => setConfirmEmail(e.target.value)}
+                    required
+                />
+                {emailError && <p className={styles.error}>{emailError}</p>}
                 <div>
                     <button onClick={notify} type="submit">Confirmar Compra</button>
                     <ToastContainer 
@@ -61,7 +77,7 @@ const Checkout = ({ cart, onClose }) => {
                         pauseOnFocusLoss
                         pauseOnHover={false}
                         theme="colored"
-                        transition: Bounce
+                        transition="Bounce"
                     />
                 </div>
             </form>
