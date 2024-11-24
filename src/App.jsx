@@ -7,6 +7,7 @@ import NotFound from './components/NotFound.jsx'
 import ThemeProvider from './context/ThemeProvider.jsx'
 import CartProvider from './context/CartProvider.jsx'
 import Cart from "./components/Cart.jsx"
+import LoadDataButton from './components/LoadDataButton.jsx'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="background">
+      <LoadDataButton />
       <CartProvider>
         <ThemeProvider>
           <BrowserRouter>

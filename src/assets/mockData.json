@@ -1,0 +1,835 @@
+[
+    {   
+        "category": "mid",
+        "description": "El Vivo V21e es un smartphone delgado y ligero, con un enfoque en la fotografía y un diseño atractivo para los usuarios modernos.",
+        "features": [
+            "8 GB de RAM para un rendimiento fluido.",
+            "Desbloqueado para cualquier compañía.",
+            "Pantalla AMOLED de 6.44 pulgadas.",
+            "Cámara frontal de 44 MP con estabilización óptica.",
+            "Procesador MediaTek Dimensity 700 para rendimiento eficiente.",
+            "Batería de 4000mAh con carga rápida.",
+            "128 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/vivov21e.jpeg",
+        "price": 220000,
+        "stock": 47,
+        "title": "Vivo V21e"
+    },
+    {
+        "category": "mid",
+        "description": "El Realme 8 es un smartphone de gama media que combina un diseño atractivo con un sistema de cámaras versátil.",
+        "features": [
+            "8 GB de RAM para un rendimiento sólido.",
+            "Liberado para usar con cualquier red.",
+            "Pantalla Super AMOLED de 6.4 pulgadas.",
+            "Cámara frontal de 16 MP para selfies claros.",
+            "Procesador MediaTek Helio G95 para un rendimiento adecuado.",
+            "Batería de 5000mAh para duración prolongada.",
+            "128 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/realme8.jpg",
+        "price": 190000,
+        "stock": 42,
+        "title": "Realme 8"
+    },
+    {
+        "category": "mid",
+        "description": "El Google Pixel 5 combina una experiencia Android pura con un diseño compacto y cámaras excepcionales.",
+        "features": [
+            "8 GB de RAM para multitarea sin esfuerzo.",
+            "Liberado para cualquier operadora.",
+            "Pantalla OLED de 6 pulgadas.",
+            "Cámara frontal de 8 MP con gran angular.",
+            "Procesador Snapdragon 765G con soporte 5G.",
+            "Batería de 4080mAh con carga rápida e inalámbrica.",
+            "128 GB de almacenamiento sin opción de expansión."
+        ],
+        "pictureUrl": "/images/google-pixel-5.webp",
+        "price": 450000,
+        "stock": 79,
+        "title": "Google Pixel 5"
+    },
+    {
+        "category": "mid",
+        "description": "El Xiaomi Redmi Note 10 Pro ofrece una pantalla AMOLED de alta calidad y una cámara de 108 MP a un precio muy competitivo.",
+        "features": [
+            "Equipado con 6 GB de memoria RAM.",
+            "Desbloqueado para que elijas la operadora que desees.",
+            "Pantalla AMOLED de 6.67 pulgadas.",
+            "Cámara delantera de 16 MP para selfies.",
+            "Procesador Snapdragon 732G eficiente y rápido.",
+            "Batería de 5020mAh para durar todo el día.",
+            "Almacenamiento de 128 GB con expansión vía microSD."
+        ],
+        "pictureUrl": "/images/redminote10pro.jpg",
+        "price": 340000,
+        "stock": 114,
+        "title": "Xiaomi Redmi Note 10 Pro"
+    },
+    {
+        "category": "offer",
+        "description": "El Realme 8 Pro ofrece una cámara principal de 108 MP y un diseño ligero a un precio económico.",
+        "features": [
+            "6 GB de RAM para buen rendimiento.",
+            "Desbloqueado para usar con cualquier operadora.",
+            "Pantalla Super AMOLED de 6.4 pulgadas.",
+            "Cámara frontal de 16 MP para selfies nítidos.",
+            "Procesador Snapdragon 720G.",
+            "Batería de 4500mAh con carga rápida de 50W.",
+            "Almacenamiento de 128 GB con expansión microSD."
+        ],
+        "pictureUrl": "/images/realme8pro.webp",
+        "price": 260000,
+        "stock": 138,
+        "title": "Realme 8 Pro"
+    },
+    {
+        "category": "mid",
+        "description": "El Motorola Edge 20 cuenta con una pantalla OLED de 6.7 pulgadas y un sistema de triple cámara de 108 MP.",
+        "features": [
+            "Memoria RAM: 6 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.7 pulgadas.",
+            "Cámara delantera de 32Mpx.",
+            "Procesador Snapdragon 778G.",
+            "Batería de 4000mAh.",
+            "Memoria interna de 128GB."
+        ],
+        "pictureUrl": "/images/motorolaedge20.jpg",
+        "price": 350000,
+        "stock": 179,
+        "title": "Motorola Edge 20"
+    },
+    {
+        "category": "mid",
+        "description": "El Oppo Reno6 Pro 5G combina un diseño elegante y capacidades fotográficas avanzadas, ideal para capturar momentos especiales.",
+        "features": [
+            "8 GB de RAM para un rendimiento fluido.",
+            "Liberado para usar con cualquier red.",
+            "Pantalla AMOLED de 6.55 pulgadas con 90Hz.",
+            "Cámara frontal de 32 MP para selfies nítidos.",
+            "Procesador MediaTek Dimensity 1200 para rendimiento alto.",
+            "Batería de 4500mAh con carga rápida de 65W.",
+            "256 GB de almacenamiento, sin opción a expansión."
+        ],
+        "pictureUrl": "/images/opporeno65g.jpg",
+        "price": 400000,
+        "stock": 47,
+        "title": "Oppo Reno6 Pro 5G"
+    },
+    {
+        "category": "top",
+        "description": "El Xiaomi Mi 11 ofrece un rendimiento excepcional y un sistema de cámaras avanzado, ideal para usuarios exigentes y amantes de la fotografía.",
+        "features": [
+            "8 GB de RAM para un rendimiento fluido.",
+            "Desbloqueado para cualquier red.",
+            "Pantalla AMOLED de 6.81 pulgadas.",
+            "Cámara frontal de 20 MP para selfies nítidos.",
+            "Procesador Snapdragon 888 para un rendimiento de alto nivel.",
+            "Batería de 4600mAh con carga rápida.",
+            "256 GB de almacenamiento interno, sin expansión."
+        ],
+        "pictureUrl": "/images/xiaomimi11.jpg",
+        "price": 950000,
+        "stock": 100,
+        "title": "Xiaomi Mi 11"
+    },
+    {
+        "category": "top",
+        "description": "El Xperia 1 III ofrece una pantalla OLED 4K HDR y un avanzado sistema de cámaras con zoom óptico variable.",
+        "features": [
+            "Memoria RAM: 12 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.5 pulgadas.",
+            "Cámara delantera de 8Mpx.",
+            "Procesador Snapdragon 888.",
+            "Batería de 4500mAh.",
+            "Memoria interna de 256GB."
+        ],
+        "pictureUrl": "/images/sonixperia1iii.jpg",
+        "price": 580000,
+        "stock": 42,
+        "title": "Sony Xperia 1 III"
+    },
+    {
+        "category": "top",
+        "description": "El Oppo Find X3 Pro cuenta con una cámara microscópica única y una pantalla AMOLED QHD+ de 6.7 pulgadas.",
+        "features": [
+            "Memoria RAM: 12 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.7 pulgadas.",
+            "Cámara delantera de 32Mpx.",
+            "Procesador Snapdragon 888.",
+            "Batería de 4500mAh.",
+            "Memoria interna de 256GB."
+        ],
+        "pictureUrl": "/images/oppofindx3pro.jpg",
+        "price": 620000,
+        "stock": 92,
+        "title": "Oppo Find X3 Pro"
+    },
+    {
+        "category": "offer",
+        "description": "El Infinix Hot 10 ofrece una experiencia básica sólida y un diseño atractivo, ideal para usuarios que buscan un dispositivo económico.",
+        "features": [
+            "4 GB de RAM para un rendimiento básico.",
+            "Liberado para usar con cualquier operadora.",
+            "Pantalla IPS LCD de 6.78 pulgadas.",
+            "Cámara frontal de 8 MP para selfies.",
+            "Procesador MediaTek Helio G70 para un uso diario.",
+            "Batería de 5000mAh para duración prolongada.",
+            "64 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/infinixhot10.jpg",
+        "price": 70000,
+        "stock": 147,
+        "title": "Infinix Hot 10"
+    },
+    {
+        "category": "top",
+        "description": "El Google Pixel 6 ofrece una experiencia Android pura con una cámara avanzada y procesador Tensor de Google.",
+        "features": [
+            "Memoria RAM: 8 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.4 pulgadas.",
+            "Cámara delantera de 8Mpx.",
+            "Procesador Google Tensor.",
+            "Batería de 4614mAh.",
+            "Memoria interna de 128GB."
+        ],
+        "pictureUrl": "/images/googlepixel6.jpg",
+        "price": 550000,
+        "stock": 76,
+        "title": "Google Pixel 6"
+    },
+    {
+        "category": "top",
+        "description": "El Sony Xperia 5 II ofrece una experiencia visual de alta calidad con su pantalla OLED HDR y un enfoque en el entretenimiento multimedia.",
+        "features": [
+            "Memoria RAM de 8 GB para un rendimiento óptimo.",
+            "Dispositivo desbloqueado para usar con cualquier operador.",
+            "Pantalla OLED de 6.1 pulgadas con calidad HDR.",
+            "Cámara frontal de 8 MP ideal para selfies.",
+            "Procesador Snapdragon 865 para alto rendimiento.",
+            "Batería de larga duración con 4000mAh.",
+            "Almacenamiento interno de 128 GB expandible."
+        ],
+        "pictureUrl": "/images/sony-xperia-5-ii.jpg",
+        "price": 540000,
+        "stock": 81,
+        "title": "Sony Xperia 5 II"
+    },
+    {
+        "category": "mid",
+        "description": "El ZTE Axon 30 Ultra ofrece un potente sistema de cámaras de 64 MP y conectividad 5G.",
+        "features": [
+            "Memoria RAM: 12 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.67 pulgadas.",
+            "Cámara delantera de 16Mpx.",
+            "Procesador Snapdragon 888.",
+            "Batería de 4600mAh.",
+            "Memoria interna de 256GB."
+        ],
+        "pictureUrl": "/images/zteaxon30ultra.jpg",
+        "price": 530000,
+        "stock": 88,
+        "title": "ZTE Axon 30 Ultra"
+    },
+    {
+        "category": "top",
+        "description": "El Asus ROG Phone 5 es un teléfono gamer con pantalla AMOLED de 144Hz y batería de larga duración.",
+        "features": [
+            "Memoria RAM: 16 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.78 pulgadas.",
+            "Cámara delantera de 24Mpx.",
+            "Procesador Snapdragon 888.",
+            "Batería de 6000mAh.",
+            "Memoria interna de 512GB."
+        ],
+        "pictureUrl": "/images/asusrogphone5.webp",
+        "price": 650000,
+        "stock": 44,
+        "title": "Asus ROG Phone 5"
+    },
+    {
+        "category": "top",
+        "description": "El Samsung Galaxy S21 es un buque insignia que combina un diseño impresionante con un rendimiento excepcional y una cámara avanzada.",
+        "features": [
+            "8 GB de RAM para un rendimiento fluido.",
+            "Liberado para usar con cualquier red.",
+            "Pantalla Dynamic AMOLED 2X de 6.2 pulgadas.",
+            "Cámara frontal de 10 MP para selfies claros.",
+            "Procesador Snapdragon 888 para un rendimiento de alto nivel.",
+            "Batería de 4000mAh con carga rápida.",
+            "128 GB de almacenamiento interno, sin expansión."
+        ],
+        "pictureUrl": "/images/samsunggalaxys21.jpg",
+        "price": 900000,
+        "stock": 34,
+        "title": "Samsung Galaxy S21"
+    },
+    {
+        "category": "top",
+        "description": "El Xperia 5 III es un smartphone de gama alta que ofrece una experiencia multimedia excepcional con su pantalla y cámaras de calidad.",
+        "features": [
+            "8 GB de RAM para multitarea eficiente.",
+            "Desbloqueado para cualquier compañía.",
+            "Pantalla OLED de 6.1 pulgadas con 120Hz.",
+            "Cámara frontal de 8 MP para selfies.",
+            "Procesador Snapdragon 888 para un rendimiento superior.",
+            "Batería de 4500mAh con carga rápida.",
+            "256 GB de almacenamiento ampliable."
+        ],
+        "pictureUrl": "/images/sony-xperia-5-iii.jpg",
+        "price": 800000,
+        "stock": 33,
+        "title": "Sony Xperia 5 III"
+    },
+    {
+        "category": "top",
+        "description": "El Asus ROG Phone 5G está diseñado para gamers, con un hardware potente y una pantalla de 144Hz para una experiencia de juego inigualable.",
+        "features": [
+            "16 GB de RAM para un rendimiento extremo.",
+            "Compatible con cualquier operadora.",
+            "Pantalla AMOLED de 6.78 pulgadas con 144Hz.",
+            "Cámara frontal de 24 MP ideal para streamers.",
+            "Procesador Snapdragon 888 para máximo rendimiento.",
+            "Batería de 6000mAh para sesiones de juego prolongadas.",
+            "256 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/asusrogphone5-2.jpg",
+        "price": 900000,
+        "stock": 40,
+        "title": "Asus ROG Phone 5G"
+    },
+    {
+        "category": "mid",
+        "description": "El Samsung Galaxy A32 es un smartphone asequible que ofrece una buena experiencia fotográfica y un rendimiento sólido.",
+        "features": [
+            "4 GB de RAM para un rendimiento fluido.",
+            "Desbloqueado para usar con cualquier red.",
+            "Pantalla Super AMOLED de 6.4 pulgadas.",
+            "Cámara frontal de 20 MP para selfies claros.",
+            "Procesador MediaTek Helio G80 para un rendimiento sólido.",
+            "Batería de 5000mAh para duración prolongada.",
+            "64 GB de almacenamiento interno, ampliable."
+        ],
+        "pictureUrl": "/images/samsunggalaxya32.jpg",
+        "price": 150000,
+        "stock": 84,
+        "title": "Samsung Galaxy A32"
+    },
+    {
+        "category": "mid",
+        "description": "El Vivo V21 5G es un smartphone de gama media con un enfoque en la fotografía y un diseño delgado y atractivo.",
+        "features": [
+            "8 GB de RAM para un uso fluido.",
+            "Desbloqueado para usar con la operadora de tu elección.",
+            "Pantalla AMOLED de 6.44 pulgadas.",
+            "Cámara frontal de 44 MP con estabilización óptica.",
+            "Procesador MediaTek Dimensity 800U con soporte 5G.",
+            "Batería de 4000mAh con carga rápida de 33W.",
+            "128 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/vivo215g.jpg",
+        "price": 350000,
+        "stock": 85,
+        "title": "Vivo V21 5G"
+    },
+    {
+        "category": "mid",
+        "description": "El Honor 50 combina un diseño elegante con una cámara de 108 MP y carga rápida de 66W.",
+        "features": [
+            "Memoria RAM: 8 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.57 pulgadas.",
+            "Cámara delantera de 32Mpx.",
+            "Procesador Snapdragon 778G.",
+            "Batería de 4300mAh.",
+            "Memoria interna de 128GB."
+        ],
+        "pictureUrl": "/images/honor50.jpg",
+        "price": 340000,
+        "stock": 130,
+        "title": "Honor 50"
+    },
+    {
+        "category": "mid",
+        "description": "El iPhone SE (2022) combina la potencia del chip A15 con un diseño compacto y asequible, ideal para quienes buscan un iPhone a buen precio.",
+        "features": [
+            "4 GB de RAM optimizados para iOS.",
+            "Desbloqueado para cualquier operadora.",
+            "Pantalla Retina HD de 4.7 pulgadas.",
+            "Cámara frontal de 7 MP con modo retrato.",
+            "Chip A15 Bionic para un rendimiento excepcional.",
+            "Batería de 2018mAh con carga rápida.",
+            "64 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/iphonese2022.jpg",
+        "price": 380000,
+        "stock": 75,
+        "title": "iPhone SE (2022)"
+    },
+    {
+        "category": "offer",
+        "description": "El Galaxy A32 5G es un smartphone accesible que destaca por su gran pantalla y su batería de larga duración, ideal para el uso diario.",
+        "features": [
+            "Incluye 4 GB de RAM para un rendimiento aceptable.",
+            "Desbloqueado para usar con la operadora que prefieras.",
+            "Pantalla Super AMOLED de 6.4 pulgadas.",
+            "Cámara frontal de 20 MP para selfies impresionantes.",
+            "Procesador MediaTek Helio G80 eficiente.",
+            "Batería de 5000mAh para uso prolongado.",
+            "Almacenamiento de 128 GB con expansión microSD."
+        ],
+        "pictureUrl": "/images/samsunggalaxya32-5g.webp",
+        "price": 200000,
+        "stock": 149,
+        "title": "Samsung Galaxy A32 5G"
+    },
+    {
+        "category": "offer",
+        "description": "El Alcatel 1S es un smartphone económico que ofrece una buena experiencia de uso, ideal para quienes buscan un dispositivo asequible.",
+        "features": [
+            "3 GB de RAM para un rendimiento básico.",
+            "Liberado para cualquier red.",
+            "Pantalla de 6.22 pulgadas con buena visibilidad.",
+            "Cámara frontal de 5 MP para selfies.",
+            "Procesador MediaTek MT6762 para uso diario.",
+            "Batería de 4000mAh para duración adecuada.",
+            "32 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/alcatel1se.jpg",
+        "price": 45000,
+        "stock": 197,
+        "title": "Alcatel 1S"
+    },
+    {
+        "category": "mid",
+        "description": "El Huawei Nova 8i es un teléfono accesible que se destaca por su diseño elegante y su sistema de cámaras cuádruples.",
+        "features": [
+            "6 GB de RAM para un rendimiento equilibrado.",
+            "Compatible con todas las operadoras.",
+            "Pantalla LCD de 6.67 pulgadas con biseles ultra delgados.",
+            "Cámara frontal de 16 MP con gran angular.",
+            "Procesador Snapdragon 662 eficiente para tareas diarias.",
+            "Batería de 4300mAh con carga rápida de 66W.",
+            "128 GB de almacenamiento sin posibilidad de expansión."
+        ],
+        "pictureUrl": "/images/Huawei-Nova8i-1.webp",
+        "price": 260000,
+        "stock": 130,
+        "title": "Huawei Nova 8i"
+    },
+    {
+        "category": "mid",
+        "description": "El LG Velvet 5G ofrece un diseño premium y una experiencia multimedia excepcional, con un enfoque en la fotografía y el video.",
+        "features": [
+            "6 GB de RAM para un rendimiento sólido.",
+            "Liberado para usar con cualquier operadora.",
+            "Pantalla P-OLED de 6.8 pulgadas con resolución FHD+.",
+            "Cámara frontal de 16 MP para selfies nítidos.",
+            "Procesador Snapdragon 845 para rendimiento adecuado.",
+            "Batería de 4300mAh con carga rápida.",
+            "128 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/LGvelvet-5g.jpg",
+        "price": 350000,
+        "stock": 65,
+        "title": "LG Velvet 5G"
+    },
+    {
+        "category": "offer",
+        "description": "El ZTE Blade V30 ofrece una experiencia balanceada con buena cámara, pantalla grande y rendimiento eficiente a bajo costo.",
+        "features": [
+            "Incluye 4 GB de RAM para un rendimiento aceptable.",
+            "Desbloqueado para usar con cualquier operadora.",
+            "Pantalla IPS de 6.67 pulgadas con resolución FHD+.",
+            "Cámara frontal de 16 MP con buenos resultados en luz baja.",
+            "Procesador Unisoc T618 de ocho núcleos.",
+            "Batería de 5000mAh con buena autonomía.",
+            "128 GB de almacenamiento con expansión microSD."
+        ],
+        "pictureUrl": "/images/ztebladev30.jpg",
+        "price": 200000,
+        "stock": 160,
+        "title": "ZTE Blade V30"
+    },
+    {
+        "category": "top",
+        "description": "El iPhone 12 Pro Max cuenta con una pantalla Super Retina XDR de 6.7 pulgadas, con un rendimiento excepcional y cámaras de alta calidad.",
+        "features": [
+            "Memoria RAM: 6 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.7 pulgadas.",
+            "Cámara delantera de 12Mpx.",
+            "Procesador Apple A14 Bionic.",
+            "Batería de 3687mAh.",
+            "Memoria interna de 128GB."
+        ],
+        "pictureUrl": "/images/iphone12promax.webp",
+        "price": 750000,
+        "stock": 120,
+        "title": "iPhone 12 Pro Max"
+    },
+    {
+        "category": "mid",
+        "description": "El iPhone 11 sigue siendo una excelente opción por su balance entre rendimiento y cámara dual avanzada.",
+        "features": [
+            "4 GB de RAM optimizados con iOS.",
+            "Compatible con cualquier operadora.",
+            "Pantalla Liquid Retina de 6.1 pulgadas.",
+            "Cámara frontal de 12 MP con modo retrato.",
+            "Chip A13 Bionic de alto rendimiento.",
+            "Batería de 3110mAh con carga inalámbrica.",
+            "64 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/iphone11.jpg",
+        "price": 420000,
+        "stock": 100,
+        "title": "iPhone 11"
+    },
+    {
+        "category": "mid",
+        "description": "El Moto G60 es un dispositivo accesible con una pantalla de 6.8 pulgadas y una cámara principal de 108 MP para capturar todos tus momentos.",
+        "features": [
+            "6 GB de RAM para un rendimiento fluido.",
+            "Desbloqueado para usar con cualquier red.",
+            "Pantalla IPS LCD de 6.8 pulgadas con tasa de refresco de 120Hz.",
+            "Cámara delantera de 32 MP ideal para selfies.",
+            "Procesador Snapdragon 732G para un rendimiento equilibrado.",
+            "Batería de 6000mAh para duración extrema.",
+            "Almacenamiento interno de 128 GB con expansión microSD."
+        ],
+        "pictureUrl": "/images/motog60.webp",
+        "price": 250000,
+        "stock": 140,
+        "title": "Motorola G60"
+    },
+    {
+        "category": "top",
+        "description": "El Mate 40 Pro de Huawei ofrece una experiencia completa con una cámara de alto nivel y rendimiento superior.",
+        "features": [
+            "Equipado con 8 GB de RAM.",
+            "Teléfono liberado para cualquier operadora.",
+            "Pantalla OLED de 6.76 pulgadas curva.",
+            "Cámara frontal de 13 MP con sensor 3D.",
+            "Procesador Kirin 9000 5G para una experiencia fluida.",
+            "Batería de 4400mAh con carga rápida e inalámbrica.",
+            "256 GB de almacenamiento interno expandible."
+        ],
+        "pictureUrl": "/images/huaweimate40pro.jpg",
+        "price": 550000,
+        "stock": 80,
+        "title": "Huawei Mate 40 Pro"
+    },
+    {
+        "category": "mid",
+        "description": "El Oppo A74 5G es un teléfono de gama media que ofrece conectividad 5G y una pantalla fluida para quienes buscan rendimiento a buen precio.",
+        "features": [
+            "Incluye 6 GB de RAM para un desempeño fluido.",
+            "Desbloqueado para usar con cualquier operador.",
+            "Pantalla LCD de 6.5 pulgadas con tasa de refresco de 90Hz.",
+            "Cámara frontal de 16 MP para selfies detalladas.",
+            "Procesador Snapdragon 480 con conectividad 5G.",
+            "Batería de 5000mAh para uso prolongado.",
+            "128 GB de almacenamiento con opción de expansión."
+        ],
+        "pictureUrl": "/images/oppoa745g.jpg",
+        "price": 240000,
+        "stock": 170,
+        "title": "Oppo A74 5G"
+    },
+    {
+        "category": "top",
+        "description": "El Galaxy Z Fold 3 redefine el concepto de smartphone con su pantalla plegable y tecnología de última generación.",
+        "features": [
+            "Incluye 12 GB de RAM para multitarea extrema.",
+            "Teléfono desbloqueado para todas las operadoras.",
+            "Pantalla Dynamic AMOLED 2X plegable de 7.6 pulgadas.",
+            "Cámara frontal de 10 MP y cámara interna de 4 MP.",
+            "Procesador Snapdragon 888 con soporte 5G.",
+            "Batería dual de 4400mAh con carga rápida e inalámbrica.",
+            "256 GB de almacenamiento con opción a expandir."
+        ],
+        "pictureUrl": "/images/galaxyzfold3.jpg",
+        "price": 900000,
+        "stock": 29,
+        "title": "Samsung Galaxy Z Fold 3"
+    },
+    {
+        "category": "mid",
+        "description": "El OnePlus Nord 2 es un teléfono de gama media con especificaciones premium y un rendimiento increíblemente fluido.",
+        "features": [
+            "8 GB de RAM para rendimiento superior.",
+            "Compatible con todas las redes.",
+            "Pantalla Fluid AMOLED de 6.43 pulgadas.",
+            "Cámara frontal de 32 MP.",
+            "Procesador MediaTek Dimensity 1200.",
+            "Batería de 4500mAh con Warp Charge 65.",
+            "128 GB de almacenamiento interno sin opción de expansión."
+        ],
+        "pictureUrl": "/images/oneplusnord2.jpg",
+        "price": 380000,
+        "stock": 130,
+        "title": "OnePlus Nord 2"
+    },
+    {
+        "category": "top",
+        "description": "El iPhone 13 Pro combina un diseño elegante con un rendimiento de alta gama y un sistema de cámaras avanzado, ideal para los entusiastas de la fotografía.",
+        "features": [
+            "6 GB de RAM para un rendimiento excepcional.",
+            "Liberado para usar con cualquier red.",
+            "Pantalla Super Retina XDR de 6.1 pulgadas.",
+            "Cámara frontal de 12 MP con modo retrato.",
+            "Procesador A15 Bionic para un rendimiento superior.",
+            "Batería de 3095mAh con carga rápida.",
+            "256 GB de almacenamiento interno, sin expansión."
+        ],
+        "pictureUrl": "/images/iphone13pro.jpg",
+        "price": 1200000,
+        "stock": 30,
+        "title": "iPhone 13 Pro"
+    },
+    {
+        "category": "offer",
+        "description": "El Tecno Camon 17 Pro ofrece un sistema de cámaras versátil y una gran pantalla, perfecto para quienes buscan calidad en fotos y videos.",
+        "features": [
+            "8 GB de RAM para un rendimiento ágil.",
+            "Desbloqueado para usar con cualquier red.",
+            "Pantalla de 6.8 pulgadas con resolución FHD+.",
+            "Cámara frontal de 48 MP para selfies de calidad.",
+            "Procesador MediaTek Helio G95 eficiente.",
+            "Batería de 5000mAh para duración prolongada.",
+            "128 GB de almacenamiento, expandible."
+        ],
+        "pictureUrl": "/images/tecno-camon-17-pro-3.webp",
+        "price": 200000,
+        "stock": 130,
+        "title": "Tecno Camon 17 Pro"
+    },
+    {
+        "category": "mid",
+        "description": "El Poco X3 Pro combina un rendimiento excepcional y una pantalla fluida, ideal para los amantes de los juegos móviles.",
+        "features": [
+            "6 GB de RAM para juegos y multitarea sin interrupciones.",
+            "Liberado para cualquier operadora.",
+            "Pantalla IPS LCD de 6.67 pulgadas con 120Hz.",
+            "Cámara frontal de 20 MP para selfies nítidos.",
+            "Procesador Snapdragon 860 para un rendimiento veloz.",
+            "Batería de 5160mAh con carga rápida de 33W.",
+            "Almacenamiento interno de 128 GB, ampliable."
+        ],
+        "pictureUrl": "/images/pocox3pro.jpg",
+        "price": 310000,
+        "stock": 120,
+        "title": "Xiaomi Poco X3 Pro"
+    },
+    {
+        "category": "offer",
+        "description": "El TCL 10 SE es un smartphone asequible que combina un diseño atractivo y buenas características para el uso diario.",
+        "features": [
+            "4 GB de RAM para un rendimiento básico.",
+            "Liberado para cualquier compañía.",
+            "Pantalla IPS LCD de 6.52 pulgadas.",
+            "Cámara frontal de 8 MP para selfies.",
+            "Procesador MediaTek Helio P22 para uso diario.",
+            "Batería de 4000mAh para duración adecuada.",
+            "64 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/tcl10se.jpg",
+        "price": 150000,
+        "stock": 65,
+        "title": "TCL 10 SE"
+    },
+    {
+        "category": "mid",
+        "description": "El Moto G100 es un dispositivo potente, diseñado para el uso de múltiples aplicaciones con su procesador Snapdragon 870.",
+        "features": [
+            "8 GB de RAM para máxima fluidez.",
+            "Teléfono desbloqueado para operar con cualquier red.",
+            "Pantalla de 6.7 pulgadas con tecnología HDR10.",
+            "Cámara frontal dual de 16 MP y 8 MP.",
+            "Procesador Snapdragon 870 para un rendimiento superior.",
+            "Batería de 5000mAh con carga TurboPower.",
+            "Almacenamiento interno de 128 GB."
+        ],
+        "pictureUrl": "/images/motorolag100.webp",
+        "price": 320000,
+        "stock": 110,
+        "title": "Motorola Moto G100"
+    },
+    {
+        "category": "top",
+        "description": "El Nokia 8.3 5G es un smartphone versátil que ofrece conectividad 5G y un sistema de cámaras versátil, ideal para los entusiastas de la fotografía.",
+        "features": [
+            "8 GB de RAM para un rendimiento sólido.",
+            "Liberado para usar con cualquier operadora.",
+            "Pantalla IPS LCD de 6.81 pulgadas.",
+            "Cámara frontal de 24 MP para selfies nítidos.",
+            "Procesador Snapdragon 765G para un rendimiento equilibrado.",
+            "Batería de 4500mAh con carga rápida.",
+            "128 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/nokia83.jpg",
+        "price": 600000,
+        "stock": 30,
+        "title": "Nokia 8.3 5G"
+    },
+    {
+        "category": "top",
+        "description": "El Sharp Aquos R6 destaca por su cámara Leica de 20 MP y una pantalla IGZO OLED de 240Hz.",
+        "features": [
+            "Memoria RAM: 12 GB",
+            "Dispositivo liberado para que elijas la compañía telefónica que prefieras.",
+            "Pantalla de 6.67 pulgadas.",
+            "Cámara delantera de 12Mpx.",
+            "Procesador Snapdragon 888.",
+            "Batería de 5000mAh.",
+            "Memoria interna de 128GB."
+        ],
+        "pictureUrl": "/images/AQUOS-R6.jpg",
+        "price": 570000,
+        "stock": 40,
+        "title": "Sharp Aquos R6"
+    },
+    {
+        "category": "mid",
+        "description": "El Huawei P40 Lite es un smartphone de gama media que combina un diseño atractivo y un sistema de cámaras versátil.",
+        "features": [
+            "6 GB de RAM para un rendimiento sólido.",
+            "Liberado para usar con cualquier red.",
+            "Pantalla IPS LCD de 6.4 pulgadas.",
+            "Cámara frontal de 16 MP para selfies.",
+            "Procesador Kirin 810 para un rendimiento adecuado.",
+            "Batería de 4200mAh con carga rápida.",
+            "128 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/huaweip40lite.webp",
+        "price": 350000,
+        "stock": 50,
+        "title": "Huawei P40 Lite"
+    },
+    {
+        "category": "mid",
+        "description": "El Nokia G50 es un dispositivo económico que ofrece 5G y una buena experiencia de uso, ideal para quienes buscan conectividad a buen precio.",
+        "features": [
+            "4 GB de RAM para un rendimiento equilibrado.",
+            "Desbloqueado para cualquier operadora.",
+            "Pantalla de 6.82 pulgadas con buena calidad de imagen.",
+            "Cámara frontal de 8 MP para selfies.",
+            "Procesador Snapdragon 480 5G para un rendimiento adecuado.",
+            "Batería de 5000mAh para duración prolongada.",
+            "64 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/nokiag50.jpg",
+        "price": 200000,
+        "stock": 47,
+        "title": "Nokia G50"
+    },
+    {
+        "category": "offer",
+        "description": "El Micromax IN Note 2 es un dispositivo asequible que ofrece un rendimiento sólido y una experiencia de usuario satisfactoria.",
+        "features": [
+            "4 GB de RAM para un uso básico.",
+            "Liberado para cualquier red.",
+            "Pantalla AMOLED de 6.43 pulgadas.",
+            "Cámara frontal de 16 MP para selfies.",
+            "Procesador MediaTek Helio G95 para rendimiento adecuado.",
+            "Batería de 5000mAh para duración prolongada.",
+            "64 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/micromaxinnote2.jpg",
+        "price": 95000,
+        "stock": 120,
+        "title": "Micromax IN Note 2"
+    },
+    {
+        "category": "offer",
+        "description": "El Infinix Zero 8 es un smartphone de gama media que destaca por su diseño y un sistema de cámaras potentes a un precio competitivo.",
+        "features": [
+            "8 GB de RAM para un uso sin problemas.",
+            "Liberado para cualquier compañía.",
+            "Pantalla IPS LCD de 6.85 pulgadas con resolución FHD+.",
+            "Cámara frontal dual de 16 MP + 8 MP para selfies creativas.",
+            "Procesador MediaTek Helio G90T para rendimiento equilibrado.",
+            "Batería de 4500mAh con carga rápida de 33W.",
+            "128 GB de almacenamiento interno, ampliable."
+        ],
+        "pictureUrl": "/images/infinixzero8.jpg",
+        "price": 210000,
+        "stock": 90,
+        "title": "Infinix Zero 8"
+    },
+    {
+        "category": "top",
+        "description": "El OnePlus 9 Pro es un smartphone insignia que ofrece un rendimiento excepcional y una experiencia visual impresionante, perfecto para los entusiastas.",
+        "features": [
+            "12 GB de RAM para una multitarea sin interrupciones.",
+            "Desbloqueado para usar con cualquier operadora.",
+            "Pantalla Fluid AMOLED de 6.7 pulgadas con 120Hz.",
+            "Cámara frontal de 16 MP con calidad excepcional.",
+            "Procesador Snapdragon 888 para máximo rendimiento.",
+            "Batería de 4500mAh con carga rápida de 65W.",
+            "256 GB de almacenamiento sin expansión."
+        ],
+        "pictureUrl": "/images/oneplus9pro.jpg",
+        "price": 850000,
+        "stock": 37,
+        "title": "OnePlus 9 Pro"
+    },
+    {
+        "category": "top",
+        "description": "El iPhone 14 combina la última tecnología de Apple con un diseño elegante, ofreciendo un rendimiento excepcional y una cámara de alta calidad.",
+        "features": [
+            "6 GB de RAM optimizados para iOS.",
+            "Desbloqueado para cualquier operadora.",
+            "Pantalla Super Retina XDR de 6.1 pulgadas.",
+            "Cámara frontal de 12 MP con modo nocturno.",
+            "Chip A15 Bionic para un rendimiento superior.",
+            "Batería de 3279mAh con carga inalámbrica.",
+            "128 GB de almacenamiento interno."
+        ],
+        "pictureUrl": "/images/iphone14.jpg",
+        "price": 480000,
+        "stock": 60,
+        "title": "iPhone 14"
+    },
+    {
+        "category": "mid",
+        "description": "El Galaxy A52 es un modelo equilibrado que combina buen rendimiento y un diseño moderno, a un precio accesible.",
+        "features": [
+            "Incluye 6 GB de RAM para tareas múltiples sin interrupciones.",
+            "Compatible con todas las operadoras del país.",
+            "Pantalla Super AMOLED de 6.5 pulgadas.",
+            "Cámara frontal de 32 MP para videollamadas claras.",
+            "Procesador Snapdragon 720G.",
+            "Batería de 4500mAh con carga rápida.",
+            "Almacenamiento interno de 128 GB con opción a expandir."
+        ],
+        "pictureUrl": "/images/samsunggalaxya52.jpg",
+        "price": 290000,
+        "stock": 149,
+        "title": "Samsung Galaxy A52"
+    },
+    {
+        "category": "mid",
+        "description": "El LG K61 es un smartphone de gama media con características interesantes y un diseño atractivo, ideal para el uso diario.",
+        "features": [
+            "4 GB de RAM para un rendimiento fluido.",
+            "Liberado para usar con cualquier operadora.",
+            "Pantalla de 6.53 pulgadas con buena calidad de imagen.",
+            "Cámara frontal de 16 MP para selfies nítidos.",
+            "Procesador MediaTek Helio P35 para un uso diario.",
+            "Batería de 4000mAh para duración adecuada.",
+            "128 GB de almacenamiento, ampliable."
+        ],
+        "pictureUrl": "/images/lgk61.jpg",
+        "price": 180000,
+        "stock": 45,
+        "title": "LG K61"
+    }
+]
